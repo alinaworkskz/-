@@ -616,48 +616,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         function updateParticles() {
             const positions = particleSystem.geometry.attributes.position.array;
             const colors = particleSystem.geometry.attributes.color.array;
@@ -784,7 +742,7 @@
         }
 
         function showCake() {
-            log('展示蛋糕，开启吹气检测');
+            log('Показываем торт, включаем проверку дыхания');
             currentState = STATE.BLOWING;
             transitionTo('cake');
             ui.settingsPanel.style.display = 'flex';
@@ -797,7 +755,7 @@
         }
 
         function successCelebration() {
-            log('许愿成功！播放庆祝动画');
+            log('   Желание исполнено! Запуск праздничной анимации');
             currentState = STATE.CELEBRATION;
             ui.statusText.innerText = "WISH GRANTED";
             ui.blowMeter.style.opacity = '0';
@@ -833,7 +791,7 @@
         });
 
 
-        const wishes_part1 = [
+        const wishes_part1 = 
            [
     "С днём рождения!",
     "",
@@ -849,11 +807,11 @@
     "",
     "Я правда рада, что ты есть в моей жизни.",
     "С днём рождения 🤍"
-      ]  ];
+       ];
         
         // 第二页歉意与快递
         const wishes_part2 = [
-            [
+            
     "Прости, что я не смогла встретить твой день рождения рядом с тобой",
     "Мне очень хотелось быть в этот момент рядом и обнять тебя первой",
     "Но даже на расстоянии я мысленно с тобой и очень сильно тебя чувствую",
@@ -864,7 +822,7 @@
     "Чтобы рядом всегда были люди, которые тебя ценят и понимают",
     "И чтобы ты никогда не сомневался в себе — ты намного сильнее, чем думаешь",
     
-]];
+];
 
         function typeWriter(textArray, containerId, speed = 50) {
             const container = document.getElementById(containerId);
@@ -907,47 +865,6 @@
             ui.page2.classList.add('hidden');
             setTimeout(() => typeWriter(wishes_part1, 'typewriter-text-1'), 400);
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
